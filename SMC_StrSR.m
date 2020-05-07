@@ -1,36 +1,4 @@
 % SMC_StrSR.m
-%      Note: 
-%       1) If affine, then  1^T =1^T Z.   
-%       2) If 'relax==1':  the structured nuclear norm, i.e.,   \sum ||C^i ||_*  is used.
-%       3) If 'relax==2': the structured nuclear norm is further relaxed as  k ||C||_* (for  \sum ||C^i ||_* <=  k ||C||_*)
-
-% %    Inputs:  X - incomplete data matrix, d*n data matrix, d is the data dimension, and n is the number of data vectors             
-%                 Omega - logical matrix to indicate the observation entries;
-%                 Theta  - the "structure" matrix computed via spectral clustering,  where Theta_ij =1 if i and j lie in different subspaces and 0, otherwise.
-%                 X_init -  the initialization of X, i.e. the result of last iteration
-%                 Z_init -  the initialization of Z, i.e. the result of last iteration
-%                 k        -  the number of subspaces
-%                 relax ={1, 2} where '1' if  the relaxation of structured nuclear norm is only for the clustering part, and '2' if for both C and Theta.     
-%                 affine ={1, 0} if the affine representation is needed
-%
-%                 lambda: regularization parameter to trade-off between error and regularization
-%                 tau: when X is noise-free on observed entries, \tau is set as 'Inf'
-%
-%                opt.tol: precision to terminate iterations, 1e-6 for toy data and 1e-2 for ExYaleB 
-%                opt.maxIter: 1e6 for toy data and 5e2 for real world data set
-%             
-%        Outputs:
-%             C:  The recovered data
-%             E:  The estimated error for LRR
-%             N:  the noise on observed entries
-%             Z:  the low-rank representation coefficient matrix
-%             stat.iter
-%             stat.rank
-%             stat.stopALM
-%
-% Copyright by Chun-Guang Li
-% Date: Sept. 18, 2013      
-% Modified by July 31, 2015
 function [Z, C, E, N] =SMC_StrSR(X, Omega,Theta, lambda, Gamma, gamma0, tau, opt, X_init, Z_init,  relax, affine)
 if nargin< 6
     gamma0 =0;
