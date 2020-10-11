@@ -30,6 +30,3 @@ K=12;
 [me_idx,acc_i, Z, X_fill] =S3C2(X, Omega, idx,lambda, Gamma, gamma0,t_max)
 
 
-%% Evaluation of results
-ARI = adjrand(me_idx,true_labs)
-NMI= nmi(me_idx,true_labs)
