@@ -3,8 +3,8 @@ S3C2: A streamlined single cell RNA-Seq data analysis framework based on improve
 
 Our Matlab (>= 2018) code admits a few experimental usages and has not been extensively tested. 
 
-The algorithm S3C2 is illustrated with an example in demo.m. The parameters in the example are given randomly.
+The algorithm S3C2 is illustrated with an example in demo.m. 
 
-The codes of the comparison algorithms in the article: SSC, SSSC, WSSC and SWSSC are refer to the relevant articles, and the SIMLR package was downloaded from Github (https://github. com/BatzoglouLabSU/SIMLR)
+The codes of the comparison algorithms in the article: SC3, SinNLRR, Corr and SSSC are refer to the relevant articles, and the SIMLR package was downloaded from Github (https://github. com/BatzoglouLabSU/SIMLR)
 
 All comparison methods use the default parameters mentioned in the articles.
