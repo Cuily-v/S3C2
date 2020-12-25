@@ -2,14 +2,9 @@ clear all
 clc
 
 %% Import Data
-addpath('PBLR_v1.0')
+addpath('PBLR')
 addpath('Data')
-% load('Test_1_Biase.mat')
-% load('Test_2_Grun.mat')
-% load('Test_3_Loh.mat')
-% load('Test_4_Ting.mat')
 load('Test_5_pollen.mat')
-% load('Test_6_Zeisel.mat')
 
 %% Data preprocessing
 M0=in_X';
